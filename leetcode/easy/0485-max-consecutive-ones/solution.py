@@ -11,5 +11,5 @@ class Solution:
             else:
                 count = 0
 
-        return max_count
+        return max(max_count,count)
 
