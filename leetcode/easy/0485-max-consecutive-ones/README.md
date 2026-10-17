@@ -35,9 +35,9 @@ Output: 2
 ## Solution
 
 **Language:** Python  
-**Runtime:** 17 ms (beats 49.87%)  
-**Memory:** 21.8 MB (beats 81.43%)  
-**Submitted:** 2026-10-14T16:55:57.853Z  
+**Runtime:** 17 ms (beats 50.13%)  
+**Memory:** 21.8 MB (beats 44.44%)  
+**Submitted:** 2026-10-17T13:17:09.787Z  
 
 ```py
 
@@ -53,7 +53,7 @@ class Solution:
             else:
                 count = 0
 
-        return max_count
+        return max(max_count,count)
 
 
 ```
