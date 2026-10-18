@@ -53,9 +53,9 @@ Output: [0,1]
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 19 MB  
-**Submitted:** 2026-10-18T13:34:52.829Z  
+**Runtime:** 1756 ms (beats 13.22%)  
+**Memory:** 19.6 MB (beats 95.00%)  
+**Submitted:** 2026-10-18T13:35:30.997Z  
 
 ```py
 class Solution:
