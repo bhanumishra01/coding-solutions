@@ -47,44 +47,34 @@ Output: false
 
 **Language:** Python  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 19.5 MB (beats 90.41%)  
-**Submitted:** 2026-11-02T18:16:37.517Z  
+**Memory:** 19.5 MB (beats 64.23%)  
+**Submitted:** 2026-11-03T12:03:17.119Z  
 
 ```py
-
 class Solution:
-    def search(self, nums: List[int], target: int) -> bool:
-        left = 0
-        right = len(nums) - 1
-
-        while left <= right:
-            mid = (left + right) // 2
-
-            if nums[mid] == target:
+    def search(self, nums: list[int], target: int) -> bool:
+        low=0
+        high=len(nums)-1
+        while low<=high:
+            mid=(low+high)//2
+            if nums[mid]==target:
                 return True
-
-            # Duplicates make it difficult to identify the sorted half
-            if nums[left] == nums[mid] == nums[right]:
-                left += 1
-                right -= 1
-
-            # Left half is sorted
-            elif nums[left] <= nums[mid]:
-                if nums[left] <= target < nums[mid]:
-                    right = mid - 1
+            if nums[mid]==nums[low]==nums[high]:
+                low+=1
+                high-=1
+                continue
+            if nums[mid]<=nums[high]:
+                if nums[mid]<=target<=nums[high]:
+                    low=mid+1
                 else:
-                    left = mid + 1
-
-            # Right half is sorted
-            else:
-                if nums[mid] < target <= nums[right]:
-                    left = mid + 1
+                    high=mid-1
+            if nums[low]<=nums[mid]:
+                if nums[low]<=target<=nums[mid]:
+                    high=mid-1
                 else:
-                    right = mid - 1
-
+                    low=mid+1
         return False
 
-        
 ```
 
 ---
